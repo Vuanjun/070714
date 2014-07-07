@@ -1,0 +1,34 @@
+ul.nav-menu {
+  background-color: #333;
+	padding-left: 0;
+	list-style-type: none;
+  @include pie-clearfix;
+}
+li.menu-item {
+  @include trailer(0.1);
+	text-align: center;
+	@include adjust-font-size-to(15px);
+	font-weight: bold;
+  border-bottom: 4px solid white;
+  & + & a {
+    border-left: 2px solid white;
+  }
+  a {
+    padding: 2px 0;
+    letter-spacing: 0.5px;
+    color: white;
+      display: block;
+      &:hover {
+        text-decoration: none;
+        color: $text-black-dark;
+        background: #ABABAB;
+      }
+  }
+  @include at-breakpoint($desktop) {
+    float: left;
+    width: 20%;
+    margin: 0;
+    border-bottom: none;
+    display: inline-block;
+  }
+}
